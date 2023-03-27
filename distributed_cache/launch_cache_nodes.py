@@ -11,6 +11,7 @@ try:
 
     for process in processes:
         process.wait()
+        
 except KeyboardInterrupt:
     for process in processes:
         process.terminate()
