@@ -6,17 +6,17 @@ A low-latency distributed cache system provides a fast, scalable, and fault-tole
 
 Here's an overview of how a distributed cache system works and how it can be used:
 
-1.  Cache nodes: The cache system consists of multiple cache nodes, which are responsible for storing and managing data. Each node stores a subset of the data in memory, and the data is distributed across nodes using a partitioning strategy.
+1.  **Cache nodes:** The cache system consists of multiple cache nodes, which are responsible for storing and managing data. Each node stores a subset of the data in memory, and the data is distributed across nodes using a partitioning strategy.
     
-2.  Data partitioning: To distribute data evenly across cache nodes, a partitioning strategy like consistent hashing is used. Consistent hashing assigns each key to a cache node based on a hash function. This approach minimizes data movement when adding or removing nodes and ensures an even distribution of data.
+2.  **Data partitioning:** To distribute data evenly across cache nodes, a partitioning strategy like consistent hashing is used. Consistent hashing assigns each key to a cache node based on a hash function. This approach minimizes data movement when adding or removing nodes and ensures an even distribution of data.
     
-3.  Data replication: To provide fault tolerance and ensure data consistency, the cache system implements data replication. When a write operation occurs, the data is replicated to multiple nodes. In case of node failures, the system can still serve requests using the replicated data. Replication strategies include primary-replica, quorum, or chain replication.
+3.  **Data replication:** To provide fault tolerance and ensure data consistency, the cache system implements data replication. When a write operation occurs, the data is replicated to multiple nodes. In case of node failures, the system can still serve requests using the replicated data. Replication strategies include primary-replica, quorum, or chain replication.
     
-4.  Cache eviction policies: Since cache nodes have limited memory, an eviction policy is employed to decide which data to remove when the cache is full. Common eviction policies include Least Recently Used (LRU) and Least Frequently Used (LFU).
+4.  **Cache eviction policies:** Since cache nodes have limited memory, an eviction policy is employed to decide which data to remove when the cache is full. Common eviction policies include Least Recently Used (LRU) and Least Frequently Used (LFU).
     
-5.  Client library: The distributed cache system provides a client library that applications use to interact with the cache. The library handles communication with cache nodes, data partitioning, and locating the appropriate node for read and write operations.
+5.  **Client library:** The distributed cache system provides a client library that applications use to interact with the cache. The library handles communication with cache nodes, data partitioning, and locating the appropriate node for read and write operations.
     
-6.  Usage scenarios: The distributed cache system can be used in various scenarios, such as:
+6.  **Usage scenarios:** The distributed cache system can be used in various scenarios, such as:
     
     -   Caching results of database queries or API calls to reduce load on backend systems.
     -   Storing session data in web applications for faster access and load balancing.
